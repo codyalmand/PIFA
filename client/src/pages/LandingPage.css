@@ -1,0 +1,36 @@
+
+#landingContainer {
+    text-align: left;
+  
+  }
+  
+  #landingTitle {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-family: serif;
+    text-decoration: underline rgb(51, 135, 214);
+    margin: 30px;
+  }
+  
+  #landingP {
+    font-size: 30px;
+    color:rgb(238, 231, 231);
+    font-family: serif;
+    text-align: left;
+    margin: 30px;
+    text-decoration: none;
+  }
+
+  #landingMS {
+    font-size: 20px;
+    color:white;
+    background-color: rgba(51, 135, 214, 0.493);
+    /* border: ridge white 2px; */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top:10%;
+    display: inline-block;
+  }
+
+  

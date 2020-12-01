@@ -33,11 +33,21 @@
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+<<<<<<< HEAD
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.5"
+=======
+<<<<<<< HEAD
+    "if-env": "^1.0.4",
+    "mongoose": "^5.10.18",
+    "react-router-dom": "^5.2.0"
+=======
+    "if-env": "^1.0.4"
+>>>>>>> e263407a10ed0b78c2883f6c68f47068acd632d7
+>>>>>>> 5fe8b948f4ee56fa15aec5c84e43c028c8bc78cd
   }
 }
