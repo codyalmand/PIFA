@@ -9,14 +9,14 @@ function Navbar() {
     return (
         <div>
             <div id="row" className="row">
-                <Link to='/login' className="nav-link">
+                <Link to='/Login' className="nav-link">
                     <Button id="button">
                     Login
                     </Button>
                 </Link>
-                <Link to='/register' className="nav-link">
+                <Link to='/Signup' className="nav-link">
                     <Button id="button">
-                    Register
+                    Signup
                     </Button>
                 </Link>
                 
@@ -25,9 +25,14 @@ function Navbar() {
                     Profile
                     </Button>
                 </Link>
-                <Link to='/Requests/Posts' className="nav-link">
+                <Link to='/Posts' className="nav-link">
                     <Button id="button">
-                    Requests/Posts
+                    Posts
+                    </Button>
+                </Link>
+                <Link to='/LearnMore' className="nav-link">
+                    <Button id="button">
+                    LearnMore
                     </Button>
                 </Link>
             </div>
