@@ -11,6 +11,10 @@
     text-decoration: underline rgb(51, 135, 214);
     margin: 30px;
   }
+
+  #logo {
+    color: white;
+  }
   
   #landingP {
     font-size: 30px;

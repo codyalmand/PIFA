@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function WallPosts() {
+function Posts() {
     return ( 
         <div>
             
@@ -9,4 +9,4 @@ function WallPosts() {
     )
 }
 
-export default WallPosts;
+export default Posts;
