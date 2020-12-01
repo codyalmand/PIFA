@@ -12,6 +12,6 @@ export default {
         return axios.post("/api/login", loginData)
     },
     logout: () => {
-        return axios.get("/logout");
+        return axios.get("/api/logout");
     }
 }
