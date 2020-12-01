@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Profile() {
+function Register() {
     return ( 
         <div>
             
@@ -9,4 +9,4 @@ function Profile() {
     )
 }
 
-export default Profile;
+export default Register;
