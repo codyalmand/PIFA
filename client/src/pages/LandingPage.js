@@ -3,7 +3,10 @@ import React from "react";
 import Navbar from "../components/Navbar.js";
 import './LandingPage.css';
 // import LearnMore from "./LearnMore.js";
+import { useStoreContext } from '../utils/GlobalStore';
 
+
+const [state] = useStoreContext();
 
 function LandingPage() {
     return ( 
