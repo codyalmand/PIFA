@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Post() {
+function Post(props) {
     return (
         <div className="col-12">
             <h5>USERNAME OF POSTER HERE</h5>
