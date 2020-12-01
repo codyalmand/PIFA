@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "watch": "nodemon server.js"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
@@ -28,13 +29,14 @@
   "homepage": "https://github.com/codyalmand/PIFA#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
-    "if-env": "^1.0.4",
-    "mongoose": "^5.10.18",
-    "react-router-dom": "^5.2.0"
-=======
-    "if-env": "^1.0.4"
->>>>>>> e263407a10ed0b78c2883f6c68f47068acd632d7
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5"
   }
 }
