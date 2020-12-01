@@ -27,14 +27,22 @@
   #loginContainer, #signupContainer, #landingMS {
     background-color: rgba(51, 135, 214, 0.801);
     text-align: center;
-    padding: 15px;
     border-radius: 25px;
-    grid:center;
+    position: absolute;
+    padding:220px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   #signupForm, #loginForm {
-    margin:60px;
     float:right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   #signupP {
