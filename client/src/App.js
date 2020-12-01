@@ -45,8 +45,9 @@ function App() {
     return (
 
         <Router>
-            <LandingPage />
-            {/* <div>
+           <LandingPage />
+            <div>
+            
                 Componetize this into Nav
                 <div>
                         {!state.userLoggedIn ? (
@@ -61,7 +62,7 @@ function App() {
                             </>
                         )
                         }
-                </div> */}
+                </div>
                 <Switch>
                     {
                         
@@ -92,7 +93,7 @@ function App() {
                     </Route>
                 </Switch>
 
-            {/* </div> */}
+            </div>
         </Router>
     );
 }
