@@ -4,7 +4,7 @@ import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
 
-function Login() {
+function Signup() {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
 
@@ -12,14 +12,13 @@ function Login() {
     const passwordRef = useRef();
     const [, dispatch] = useStoreContext();
 
-    const handleLogin = (event) => {
+    const handleSignup = (event) => {
         event.preventDefault();
-        const loginData = {
+        const signupData = {
             email: emailRef.current.value,
             password: passwordRef.current.value
         };
-        API.login(loginData).then(response => {
-            setShowError(false);
+        API.signup(signupData).then(response => {
             const { email } = response.data;
             dispatch({
                 type: AUTH_SET_LOGGED_IN,
@@ -29,7 +28,7 @@ function Login() {
             });
         }).catch(err => {
             setShowError(true);
-            setErrorMessage("An error occurred during login");
+            setErrorMessage("An error occurred while signing up");
         })
     }
 
@@ -37,8 +36,8 @@ function Login() {
         <div className="container">
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
-                    <h2>Login</h2>
-                    <form className="signup" onSubmit={handleLogin}>
+                    <h2>Sign Up Form</h2>
+                    <form className="signup" onSubmit={handleSignup}>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
@@ -51,14 +50,14 @@ function Login() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button type="submit" className="btn btn-default">Login</button>
+                        <button type="submit" className="btn btn-default">Sign Up</button>
                     </form>
                     <br />
-                    <p>Or Sign up  <Link to="/signup">here</Link></p>
+                    <p>Or log in <Link to="/login">here</Link></p>
                 </div>
             </div>
         </div>
     </div>
 }
 
-export default Login;
+export default Signup;
