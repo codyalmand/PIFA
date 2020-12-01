@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
@@ -46,15 +45,13 @@ function App() {
     return (
 
         <Router>
-            <div>
-                {/* Componetize this into Nav */}
+            <LandingPage />
+            {/* <div>
+                Componetize this into Nav
                 <div>
-                    <LandingPage />
                         {!state.userLoggedIn ? (
                             // if the user is Logged out
                             <>
-                                <b>Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
                             </>
                         ) : (
                             // If the user is Logged In
@@ -64,7 +61,7 @@ function App() {
                             </>
                         )
                         }
-                </div>
+                </div> */}
                 <Switch>
                     {
                         
@@ -88,13 +85,14 @@ function App() {
                     {
                         /* These routes are ALWAYS available */
                     }
+                    
                     <Route>
                         { /*If none of the other pages match, redirect them to the main page */}
                         <Redirect to="/" />
                     </Route>
                 </Switch>
 
-            </div>
+            {/* </div> */}
         </Router>
     );
 }
