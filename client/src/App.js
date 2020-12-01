@@ -7,6 +7,7 @@ import Members from "./pages/Members";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import LandingPage from "./pages/LandingPage.js";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
             <div>
                 {/* Componetize this into Nav */}
                 <div>
+                    <LandingPage />
                         {!state.userLoggedIn ? (
                             // if the user is Logged out
                             <>
@@ -58,7 +60,7 @@ function App() {
                             // If the user is Logged In
                             <>
                                 <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/members">Members</Link> | <a onClick={() => logout() }href="#">Logout</a>
+                                <Link to="/LandingPage">LandingPage</Link> | <a onClick={() => logout() }href="#">Logout</a>
                             </>
                         )
                         }
@@ -69,17 +71,17 @@ function App() {
                         !state.userLoggedIn ? (
                             // These routes are only avaialable to LOGGED OUT users
                             <>
-                                <Route exact path="/login" component={Login} />
-                                <Route exact path="/signup" component={Signup} />
+                                <Route exact path="/Login" component={Login} />
+                                <Route exact path="/Signup" component={Signup} />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
                             <>
-                                <Route exact path={["/login","/signup"]}>
+                                <Route exact path={["/Login","/Signup"]}>
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
-                                    <Redirect to="/members" />
+                                    <Redirect to="/LandingPage" />
                                 </Route>
-                                <Route exact path="/members" component={Members} />
+                                <Route exact path="/LandingPage" component={LandingPage} />
                             </>
                             )
                     }

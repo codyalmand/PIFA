@@ -29,6 +29,12 @@
   "dependencies": {
     "axios": "^0.21.0",
     "express": "^4.17.1",
+<<<<<<< HEAD
+    "if-env": "^1.0.4",
+    "mongoose": "^5.10.18",
+    "react-router-dom": "^5.2.0"
+=======
     "if-env": "^1.0.4"
+>>>>>>> e263407a10ed0b78c2883f6c68f47068acd632d7
   }
 }
