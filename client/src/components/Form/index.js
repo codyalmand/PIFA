@@ -9,7 +9,7 @@ function Form(props) {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <form>
-                        <div className="form-group">
+                        <div className="form-group dropdown-item">
                             <input 
                                 className="form-control"
                                 name="title"
@@ -17,7 +17,7 @@ function Form(props) {
                                 onChange={props.onChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group dropdown-item">
                             <textarea
                                 className="form-control"
                                 rows="20"

@@ -10,13 +10,15 @@ function Signup() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const usernameRef = useRef();
     const [, dispatch] = useStoreContext();
 
     const handleSignup = (event) => {
         event.preventDefault();
         const signupData = {
             email: emailRef.current.value,
-            password: passwordRef.current.value
+            password: passwordRef.current.value,
+            username: usernameRef.current.value
         };
         API.signup(signupData).then(response => {
             const { email } = response.data;
@@ -41,6 +43,10 @@ function Signup() {
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputUsername">Username</label>
+                            <input type="name" className="form-control" placeholder="Username" ref={usernameRef} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1">Password</label>
