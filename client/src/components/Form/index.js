@@ -10,14 +10,23 @@ function Form(props) {
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <form>
                         <div className="form-group">
+                            <input 
+                                className="form-control"
+                                name="title"
+                                placeholder="Title"
+                                onChange={props.onChange}
+                            />
+                        </div>
+                        <div className="form-group">
                             <textarea
                                 className="form-control"
                                 rows="20"
                                 name="description"
                                 placeholder="Make your request here"
+                                onChange={props.onChange}
                             />
                         </div>
-                        <button className="btn btn-secondary"  type="button">
+                        <button className="btn btn-secondary"  type="button" onClick={props.onClick}>
                             Post Request
                         </button>
                     </form>

@@ -21,13 +21,38 @@ function Posts() {
             .catch(err => console.log(err))
     }
 
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({ ...formObject, [name]: value})
+    }
+    
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        API.savePost({
+            title: formObject.title,
+            description: formObject.description
+        })
+        .then(res => loadPost())
+        .then(res => setFormObject(""))
+        .catch(err => console.log(err))
+    }
+
     return (
         <div className="container">
             <div className="row">
-                <Form />
+                <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
             <div className="row">
-                <Post />
+                {posts.length ? (
+                    posts.map(post => (
+                        <Post
+                            title={post.title}
+                            description={post.description}
+                        />
+                    ))
+                ) : (
+                    <h3 style={{ textAlign: "center" }}>No Post Made</h3>
+                )}
             </div>
         </div>
     )
