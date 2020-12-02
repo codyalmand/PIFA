@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-// import Posts from "./pages/Posts";
+import Posts from "./pages/Posts";
 import Navbar from "./components/Navbar";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
@@ -75,6 +75,7 @@ function App() {
                                     <Redirect to="/LandingPage" />
                                 </Route>
                                 <Route exact path="/LandingPage" component={LandingPage} />
+                                <Route exact path="/Posts" component={Posts} />
                             </>
                             )
                     }
