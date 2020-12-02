@@ -31,9 +31,18 @@ router.post("/login", passport.authenticate("local"), function (req, res) {
 router.post("/signup", function (req, res) {
   db.User.create({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    username: req.body.username
   })
     .then(function () {
+
+      let mailOptions = {
+        from: 'austinpayitforward@gmail.com',
+        to: req.body.email,
+        subject: 'Welcome to Pay It Forward',
+        text: `Welcome ${req.body.username}! We are here to work together to help the people of Austin.`
+      };
+
       transporter.sendMail(mailOptions, function(err, data) {
         if(err) {
             console.log('We got an error', err)
