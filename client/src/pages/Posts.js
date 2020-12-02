@@ -3,6 +3,7 @@ import Post from "../components/Post";
 import Form from "../components/Form";
 import { use } from "passport";
 import API from "../utils/API";
+import "./Posts.css";
 
 function Posts() {
 

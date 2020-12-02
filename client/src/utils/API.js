@@ -17,7 +17,7 @@ export default {
     getPosts: () => {
         return axios.get("/api/posts");
     },
-    savePost: () => {
+    savePost: (postData) => {
         return axios.post("/api/posts", postData);
     }
 }
