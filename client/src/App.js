@@ -51,7 +51,7 @@ function App() {
 
             <Navbar />
            <LandingPage />
-         
+            
 
                 <Switch>
                     
@@ -62,19 +62,19 @@ function App() {
                             // These routes are only avaialable to LOGGED OUT users
                             <>
                                 <Route exact path="/Login" component={Login} />
-                                <Route exact path="./pages/Signup" component={Signup} />
+                                <Route exact path="/Signup" component={Signup} />
 
 
-                                <Route exact path="./pages/LearnMore" component={LearnMore} />
+                                <Route exact path="/LearnMore" component={LearnMore} />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
                             <>
-                                <Route exact path={["./pages/Login","./pages/Signup","./pages/LearnMore"]}>
+                                <Route exact path={["/Login","/Signup","/LearnMore"]}>
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
-                                    <Redirect to="./pages/LandingPage" />
+                                    <Redirect to="/LandingPage" />
                                 </Route>
-                                <Route exact path="./pages/LandingPage" component={LandingPage} />
+                                <Route exact path="/LandingPage" component={LandingPage} />
                             </>
                             )
                     }
