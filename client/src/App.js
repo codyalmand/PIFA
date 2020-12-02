@@ -46,19 +46,15 @@ function App() {
     }
 
     return (
-
         <Router>
 
                 <Navbar />
                 <LandingPage />
                 
                 <Switch>
-                    
                     {
-                        
-                        
                         !state.userLoggedIn ? (
-                            // These routes are only avaialable to LOGGED OUT users
+            // These routes are only avaialable to LOGGED OUT users
                             <>
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
@@ -66,13 +62,12 @@ function App() {
                                 <Route exact path="/Posts" component={Posts} />
                             </>
                         ) : (
-                            // These routes are only available to LOGGED IN users
+            // These routes are only available to LOGGED IN users
                             <>
-                            
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
 
-                                    {/* If you are logged in, going to the login/signup page will take you to the members page */}
+            {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/LandingPage" />
                                 
                                 <Route exact path="/LandingPage" component={LandingPage} />
@@ -85,7 +80,7 @@ function App() {
                     }
                     
                     <Route>
-                        { /*If none of the other pages match, redirect them to the main page */}
+            { /*If none of the other pages match, redirect them to the main page */}
                         <Redirect to="/" />
                     </Route>
                 </Switch>

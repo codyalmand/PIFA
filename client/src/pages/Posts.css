@@ -1,0 +1,25 @@
+.container {
+    background-color: rgba(51, 135, 214, 0.932);
+    border-radius: 25px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
+    padding:300px;
+  }
+
+#postmade {
+    background-color: rgba(51, 135, 214, 0.932);
+}
+
+.form {
+    
+}
+
+#post {
+    color: white;
+    background-color: rgba(51, 135, 214, 0.932);
+ 
+}

@@ -49,11 +49,11 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
-        <div className="container" style={{ background: "white"}}>
-            <div className="row">
+        <div className="container" >
+            <div className="form">
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
-            <div className="row">
+            <div className="post">
                 {posts.length ? (
                     posts.map(post => (
                         <Post
@@ -62,7 +62,7 @@ function Posts() {
                         />
                     ))
                 ) : (
-                    <h3 style={{ textAlign: "center" }}>No Post Made</h3>
+                    <h3 id="postmade">No Post Made</h3>
                 )}
             </div>
         </div>
