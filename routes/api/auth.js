@@ -2,6 +2,22 @@
 const router = require("express").Router();
 const db = require("../../models");
 const passport = require("../../config/passport");
+const nodemailer = require('nodemailer');
+
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+      user: 'austinpayitforward@gmail.com',
+      pass: 'Ihatereact1!'
+  }
+});
+
+let mailOptions = {
+  from: 'austinpayitforward@gmail.com',
+  to: 'diosdado.mario@gmail.com',
+  subject: 'Testing',
+  text: 'it works!'
+};
 
 
 // Route for logging in
@@ -18,6 +34,13 @@ router.post("/signup", function (req, res) {
     password: req.body.password
   })
     .then(function () {
+      transporter.sendMail(mailOptions, function(err, data) {
+        if(err) {
+            console.log('We got an error', err)
+        } else {
+            console.log('Email sent!');
+        }
+    });
       res.redirect(307, "/api/login");
     })
     .catch(function (err) {
