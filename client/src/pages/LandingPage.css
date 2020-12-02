@@ -24,12 +24,24 @@
     text-decoration: none;
   }
 
-  #loginContainer, #signupContainer {
+  #loginContainer {
     background-color: rgba(51, 135, 214, 0.801);
     text-align: center;
     border-radius: 25px;
     position: absolute;
     padding:220px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
+  }
+
+  #signupContainer {
+    background-color: rgba(51, 135, 214, 0.801);
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+    padding:280px;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);

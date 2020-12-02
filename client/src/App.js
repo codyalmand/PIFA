@@ -67,13 +67,15 @@ function App() {
                         ) : (
                             // These routes are only available to LOGGED IN users
                             <>
-                                <Route exact path={["/Login","/Signup","/LearnMore"]}>
+                                <Route exact path="/Login" component={Login} />
+                                <Route exact path="/Signup" component={Signup} />
+                                <Route exact path="/LearnMore" component={LearnMore} />
 
 
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/LandingPage" />
-                                </Route>
-                                <Route exact path="/LandingPage" component={LandingPage} />
+                                
+                                
                             </>
                             )
                     }
