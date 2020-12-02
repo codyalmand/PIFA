@@ -7,7 +7,9 @@ import { useStoreContext } from '../utils/GlobalStore';
 
 
 function LandingPage() {
+
     const [state] = useStoreContext();
+
     return ( 
         <div>
             <Navbar /> 

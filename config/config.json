@@ -3,8 +3,13 @@
       "use_env_variable": "LOCALDB_URL"
     },
     "test": {
+<<<<<<< HEAD
       "username": "codyalmand",
       "password": "cba123!?",
+=======
+      "username": "root",
+      "password": "root",
+>>>>>>> 8ee80e9f59692da19d9dbd4399da3374d9aec886
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
