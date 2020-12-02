@@ -1,11 +1,15 @@
 {
     "development": {
-      "use_env_variable": "LOCALDB_URL"
+      "username": "root",
+      "password": "root",
+      "database": "Project3Dev",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "port": "3306"
     },
     "test": {
       "username": "root",
-      "password": "YIHYLPSIPPYP1!",
-
+      "password": "root",
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
