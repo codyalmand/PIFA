@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Members from "./pages/Members";
+// import Posts from "./pages/Posts";
+import Navbar from "./components/Navbar";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 import LandingPage from "./pages/LandingPage.js";
+import LearnMore from "./components/LearnMore/index.js";
 
 
 function App() {
@@ -46,38 +48,29 @@ function App() {
     return (
 
         <Router>
-            <div>
-                {/* Componetize this into Nav */}
-                <div>
-                    <LandingPage />
-                        {!state.userLoggedIn ? (
-                            // if the user is Logged out
-                            <>
-                                <b>Welcome Guest!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
-                            </>
-                        ) : (
-                            // If the user is Logged In
-                            <>
-                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/LandingPage">LandingPage</Link> | <a onClick={() => logout() }href="#">Logout</a>
-                            </>
-                        )
-                        }
-                </div>
+
+            <Navbar />
+           <LandingPage />
+            
+
                 <Switch>
+                    
                     {
+                        
                         
                         !state.userLoggedIn ? (
                             // These routes are only avaialable to LOGGED OUT users
                             <>
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
+
+
+                                <Route exact path="/LearnMore" component={LearnMore} />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
                             <>
-                                <Route exact path={["/Login","/Signup"]}>
+                                <Route exact path={["/Login","/Signup","/LearnMore"]}>
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/LandingPage" />
                                 </Route>
@@ -88,13 +81,13 @@ function App() {
                     {
                         /* These routes are ALWAYS available */
                     }
+                    
                     <Route>
                         { /*If none of the other pages match, redirect them to the main page */}
                         <Redirect to="/" />
                     </Route>
                 </Switch>
 
-            </div>
         </Router>
     );
 }

@@ -6,11 +6,11 @@ export default {
     return axios.delete("/api/posts/" + id).then(result => result.data);
   },
   // Saves a post to the database
-  savePost: function (bookData) {
-    return axios.post("/api/posts", bookData).then(result => result.data);
+  createPost: function (postData) {
+    return axios.post("/api/addpost", postData).then(result => result.data);
   },
   // Get the saved posts from the database
-  savedPosts: function () {
+  getPosts: function () {
     return axios.get("/api/posts").then(result => result.data);
   }
 };
