@@ -18,6 +18,6 @@ export default {
         return axios.get("/api/posts");
     },
     savePost: () => {
-        return axios.post("/api/posts");
+        return axios.post("/api/posts", postData);
     }
 }
