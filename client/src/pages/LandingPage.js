@@ -1,9 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import './LandingPage.css';
-// import LearnMore from "./LearnMore.js";
 import { useStoreContext } from '../utils/GlobalStore';
+import Navbar from "../components/Navbar";
 
 
 function LandingPage() {
@@ -12,7 +10,6 @@ function LandingPage() {
 
     return ( 
         <div>
-            <Navbar /> 
             <container id="landingContainer">
                 <h1 id="landingTitle">
                         <svg id="logo" width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

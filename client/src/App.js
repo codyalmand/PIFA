@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import './App.css';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+// import Posts from "./pages/Posts";
+import Navbar from "./components/Navbar";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
@@ -47,7 +49,9 @@ function App() {
 
         <Router>
 
+            <Navbar />
            <LandingPage />
+            
 
                 <Switch>
                     
