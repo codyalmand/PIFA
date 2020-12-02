@@ -48,7 +48,7 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
-        <div className="container">
+        <div className="container" style={{ background: "white"}}>
             <div className="row">
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>

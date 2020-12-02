@@ -1,8 +1,8 @@
-var db = require("../models");
+var db = require("../../models");
 const router = require("express").Router();
 
 //Route for creating new event
-router.post("/addpost", function (req, res) {
+router.post("/posts", function (req, res) {
   db.Post.create({
     title: req.body.title,
     description: req.body.description,
