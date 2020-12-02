@@ -8,9 +8,11 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
+    const [userId, setUserId] = useState("");
 
     useEffect(() => {
         loadPost()
+        loadUserId()
     }, []);
 
     function loadPost() {
@@ -30,13 +32,21 @@ function Posts() {
         event.preventDefault();
         API.savePost({
             title: formObject.title,
-            description: formObject.description
+            description: formObject.description,
+            user_id: userId.id
         })
-        .then(res => loadPost())
-        .then(res => setFormObject(""))
-        .catch(err => console.log(err))
+            .then(res => loadPost())
+            .then(res => setFormObject(""))
+            .catch(err => console.log(err))
     }
 
+    function loadUserId() {
+        API.checkUserInfo()
+            .then(res => setUserId({
+                id: res.data.id
+            }))
+            .then(res => console.log(userId.id))
+    }
     return (
         <div className="container">
             <div className="row">
