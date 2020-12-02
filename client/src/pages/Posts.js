@@ -8,6 +8,7 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
+    const [user, setUser] = useState("")
 
     useEffect(() => {
         loadPost()
