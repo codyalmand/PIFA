@@ -1,5 +1,5 @@
 #container {
-    background-color: rgba(51, 135, 214, 0.801);
+    background-color: rgba(51, 135, 214, 0.932);
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -8,9 +8,14 @@
     transform: translate(-50%, -40%);
   }
 
-  #info {
+  #learnMoreInfo {
     font-size: 30px;
-    padding:50px;
+    padding:90px;
     text-align: center;
     color: rgb(255, 255, 255);
+    font-family: serif
+  }
+
+  #tagline {
+    font-size: 40px;
   }

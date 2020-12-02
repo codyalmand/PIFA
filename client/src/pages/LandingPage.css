@@ -25,7 +25,7 @@
   }
 
   #loginContainer {
-    background-color: rgba(51, 135, 214, 0.801);
+    background-color: rgba(51, 135, 214, 0.952);
     text-align: center;
     border-radius: 25px;
     position: absolute;
@@ -37,7 +37,7 @@
   }
 
   #signupContainer {
-    background-color: rgba(51, 135, 214, 0.801);
+    background-color: rgba(51, 135, 214, 0.945);
     text-align: center;
     border-radius: 25px;
     position: absolute;
