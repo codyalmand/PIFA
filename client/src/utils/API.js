@@ -13,5 +13,11 @@ export default {
     },
     logout: () => {
         return axios.get("/api/logout");
+    },
+    getPosts: () => {
+        return axios.get("/api/posts");
+    },
+    savePost: () => {
+        return axios.post("/api/posts");
     }
 }

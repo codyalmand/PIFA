@@ -71,11 +71,11 @@ function App() {
                                 <Route exact path="/Signup" component={Signup} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
 
-
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/LandingPage" />
                                 
-                                
+                                <Route exact path="/LandingPage" component={LandingPage} />
+                                <Route exact path="/Posts" component={Posts} />
                             </>
                             )
                     }
