@@ -1,7 +1,6 @@
 
 #landingContainer {
     text-align: left;
-  
   }
   
   #landingTitle {
@@ -10,6 +9,10 @@
     font-family: serif;
     text-decoration: underline rgb(51, 135, 214);
     margin: 30px;
+  }
+
+  #logo {
+    color: white;
   }
   
   #landingP {
@@ -21,16 +24,44 @@
     text-decoration: none;
   }
 
-  #landingMS {
-    font-size: 20px;
-    color:white;
-    background-color: rgba(51, 135, 214, 0.493);
-    /* border: ridge white 2px; */
-    border-radius: 10px;
-    padding: 10px;
+  #loginContainer, #signupContainer {
+    background-color: rgba(51, 135, 214, 0.801);
     text-align: center;
-    margin-top:10%;
-    display: inline-block;
+    border-radius: 25px;
+    position: absolute;
+    padding:220px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
   }
+
+  #signupForm, #loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -47%);
+    font-size: 20px;
+  }
+
+  #signupP {
+    color: white;
+  }
+
+  #formbutton {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(51, 135, 214, 0.74);
+    border:solid white 1px;
+    border-radius: 12px;
+}
+
+#formbutton:hover {
+    background: rgb(21, 101, 175);
+}
+
+
 
   

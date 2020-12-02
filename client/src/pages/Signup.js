@@ -33,13 +33,13 @@ function Signup() {
     }
 
     return <div>
-        <div className="container">
+        <div id="signupContainer" className="container">
             <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                    <h2>Sign Up Form</h2>
+                <div id="signupForm" className="col-md-6 col-md-offset-3">
+                    <h2 id="signupP">Sign Up</h2>
                     <form className="signup" onSubmit={handleSignup}>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <label htmlFor="exampleInputEmail1">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
                         </div>
                         <div className="form-group">
@@ -50,10 +50,11 @@ function Signup() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button type="submit" className="btn btn-default">Sign Up</button>
+                        <button id="formbutton" type="submit" className="btn btn-default">Sign Up</button>
+                        <br></br><br></br>
                     </form>
-                    <br />
-                    <p>Or log in <Link to="/login">here</Link></p>
+                 
+                    <p>or Login <Link to="/signup" id="signupP">here</Link></p>
                 </div>
             </div>
         </div>

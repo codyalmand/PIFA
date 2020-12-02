@@ -9,17 +9,22 @@ function Navbar() {
     return (
         <div>
             <div id="row" className="row">
+            <Link to='/Signup' className="nav-link">
+                    <Button id="button">
+                    Sign Up
+                    </Button>
+                </Link>
                 <Link to='/Login' className="nav-link">
                     <Button id="button">
                     Login
                     </Button>
                 </Link>
-                <Link to='/Signup' className="nav-link">
+                <Link to='/Logout' className="nav-link">
                     <Button id="button">
-                    Signup
+                    Logout
                     </Button>
                 </Link>
-                
+               
                 <Link to='/Profile' className="nav-link">
                     <Button id="button">
                     Profile
@@ -36,6 +41,7 @@ function Navbar() {
                     </Button>
                 </Link>
             </div>
+            
         </div>
     );
 }
