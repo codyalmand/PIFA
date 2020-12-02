@@ -4,7 +4,7 @@ const authRoutes = require("./auth");
 
 
 // Book routes
-router.use("/posts", postRoutes);
+router.use("/", postRoutes);
 router.use("/", authRoutes);
 
 module.exports = router;
