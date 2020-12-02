@@ -1,14 +1,13 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar.js";
+import Navbar from "../components/Navbar";
 import './LandingPage.css';
 // import LearnMore from "./LearnMore.js";
 import { useStoreContext } from '../utils/GlobalStore';
 
 
-const [state] = useStoreContext();
-
 function LandingPage() {
+    const [state] = useStoreContext();
     return ( 
         <div>
             <Navbar /> 
