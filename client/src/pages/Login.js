@@ -34,13 +34,13 @@ function Login() {
     }
 
     return <div>
-        <div className="container">
+        <div className="container" id="loginContainer">
             <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                    <h2>Login</h2>
+                <div id="loginForm" className="col-md-6 col-md-offset-3">
+                    <h2 id="signupP">Login</h2>
                     <form className="signup" onSubmit={handleLogin}>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <label htmlFor="exampleInputEmail1">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
                         </div>
                         <div className="form-group">
@@ -51,10 +51,11 @@ function Login() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button type="submit" className="btn btn-default">Login</button>
+                        <button id="formbutton" type="submit" className="btn btn-default">Login</button>
+                        <br></br><br></br>
                     </form>
-                    <br />
-                    <p>Or Sign up  <Link to="/signup">here</Link></p>
+                 
+                    <p>or Sign up  <Link to="/signup" id="signupP">here</Link></p>
                 </div>
             </div>
         </div>
