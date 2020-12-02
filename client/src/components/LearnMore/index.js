@@ -1,14 +1,14 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import Navbar from "../components/Navbar.js";
-import './pages/LandingPage.css';
+import "./style.css"
 import Button from 'react-bootstrap/Button';
 
 function LearnMore() {
     return ( 
         <div>
-            <container id="landingContainerTwo">
-                <h1 id="landingMS">
+            <container id="container">
+                <h1 id="info">
                     asdfasd fasdfas fasdfasdf asdfa sdfasdf asdfasdfa sdfasd fasdfafas
                     dfasdfasdfasd fasdfakdjvkladjfbkab fvlkebrv kaerbvklebr vkaerkjeaevf
                     aekhfvbkejrbvkjebrvkj berkvjbekrjvkejr nkjernvlwerjn vkwejrnvkjje

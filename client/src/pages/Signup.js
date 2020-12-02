@@ -39,7 +39,7 @@ function Signup() {
                     <h2 id="signupP">Sign Up</h2>
                     <form className="signup" onSubmit={handleSignup}>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <label htmlFor="exampleInputEmail1">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
                         </div>
                         <div className="form-group">

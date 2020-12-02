@@ -7,6 +7,7 @@ import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 import LandingPage from "./pages/LandingPage.js";
+import LearnMore from "./components/LearnMore/index.js";
 
 
 function App() {
@@ -45,37 +46,27 @@ function App() {
     return (
 
         <Router>
+
            <LandingPage />
-            <div>
-            
-                Componetize this into Nav
-                <div>
-                        {!state.userLoggedIn ? (
-                            // if the user is Logged out
-                            <>
-                            </>
-                        ) : (
-                            // If the user is Logged In
-                            <>
-                                <b>Welcome {state.email}!</b> &nbsp;&nbsp;&nbsp;
-                                <Link to="/LandingPage">LandingPage</Link> | <a onClick={() => logout() }href="#">Logout</a>
-                            </>
-                        )
-                        }
-                </div>
+
                 <Switch>
+                    
                     {
+                        
                         
                         !state.userLoggedIn ? (
                             // These routes are only avaialable to LOGGED OUT users
                             <>
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
+
+
+                                <Route exact path="/LearnMore" component={LearnMore} />
                             </>
                         ) : (
                             // These routes are only available to LOGGED IN users
                             <>
-                                <Route exact path={["/Login","/Signup"]}>
+                                <Route exact path={["/Login","/Signup","/LearnMore"]}>
                                     {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/LandingPage" />
                                 </Route>
@@ -93,7 +84,6 @@ function App() {
                     </Route>
                 </Switch>
 
-            </div>
         </Router>
     );
 }

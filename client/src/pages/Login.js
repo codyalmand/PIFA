@@ -40,7 +40,7 @@ function Login() {
                     <h2 id="signupP">Login</h2>
                     <form className="signup" onSubmit={handleLogin}>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
+                            <label htmlFor="exampleInputEmail1">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email" ref={emailRef} />
                         </div>
                         <div className="form-group">

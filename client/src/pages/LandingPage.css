@@ -24,7 +24,7 @@
     text-decoration: none;
   }
 
-  #loginContainer, #signupContainer, #landingMS {
+  #loginContainer, #signupContainer {
     background-color: rgba(51, 135, 214, 0.801);
     text-align: center;
     border-radius: 25px;
@@ -61,6 +61,7 @@
 #formbutton:hover {
     background: rgb(21, 101, 175);
 }
+
 
 
   
