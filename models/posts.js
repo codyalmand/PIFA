@@ -17,13 +17,13 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    // Event.associate = models => {
-    //     Event.belongsTo(models.User, {
-    //         foreignKey: {
-    //             allowNull: true
-    //         }
-    //     });
-    // }
+    Post.associate = models => {
+        Post.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: true
+            }
+        });
+    }
 
     return Post;
 };
