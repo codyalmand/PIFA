@@ -6,10 +6,11 @@ router.post("/posts", function (req, res) {
   db.Post.create({
     title: req.body.title,
     description: req.body.description,
-    user_id: req.body.user_id
+    UserId: req.body.UserId
   })
-    .then(function () {
-      res.redirect(307, "/");
+    .then(function (data) {
+      console.log(data);
+      res.json(data);
     })
     .catch(function (err) {
       res.status(401).json(err);
@@ -25,7 +26,7 @@ router.get("/posts", function (req, res) {
 router.get("/posts/user/:user_id", function (req, res) {
   db.Post.findAll({
     where: {
-      user_id: req.params.user_id
+      UserId: req.params.user_id
     }
   }).then(function (dbEvent) {
     res.json(dbEvent);
@@ -65,16 +66,16 @@ router.put("/posts", function (req, res) {
     });
 });
 
-router.delete("/posts/:id", function (req, res) {
-  db.Post.destroy({
-    where: {
-      id: req.params.id
-    }
+// router.delete("/posts/:id", function (req, res) {
+//   db.Post.destroy({
+//     where: {
+//       id: req.params.id
+//     }
 
-  }).then(function (dbEvent) {
-    res.json(dbEvent);
-  })
+//   }).then(function (dbEvent) {
+//     res.json(dbEvent);
+//   })
 
-})
+// })
 
 module.exports = router;
