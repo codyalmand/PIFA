@@ -48,8 +48,8 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
-        <div className="container" style={{ background: "white"}}>
-            <div className="row">
+        <div className="container" style={{ background: "white", borderRadius: "10px" }}>
+            <div className="row" style={{ margin: "20px" }}>
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
             <div className="row">
