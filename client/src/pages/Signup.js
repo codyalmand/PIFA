@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { AUTH_SET_LOGGED_IN } from "../utils/actions";
 import { useStoreContext } from '../utils/GlobalStore';
+import "./Signup.css";
 
 function Signup() {
     const [showError, setShowError] = useState(false);

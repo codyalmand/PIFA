@@ -4,8 +4,8 @@
     },
     "test": {
       "username": "root",
-      "password": "Tigerseye05!6",
-      "database": "database_test",
+      "password": "root",
+      "database": "Project3Dev",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },

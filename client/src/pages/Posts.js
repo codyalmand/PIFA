@@ -3,6 +3,7 @@ import Post from "../components/Post";
 import Form from "../components/Form";
 import { use } from "passport";
 import API from "../utils/API";
+import "./Posts.css";
 
 function Posts() {
 
@@ -48,11 +49,16 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
+<<<<<<< HEAD
         <div className="container" style={{ background: "white", borderRadius: "10px" }}>
             <div className="row" style={{ margin: "20px" }}>
+=======
+        <div className="container" >
+            <div className="form">
+>>>>>>> 629028d924c5f0c3e8a5a7942a043739d862a17d
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
-            <div className="row">
+            <div className="post">
                 {posts.length ? (
                     posts.map(post => (
                         <Post
@@ -61,7 +67,7 @@ function Posts() {
                         />
                     ))
                 ) : (
-                    <h3 style={{ textAlign: "center" }}>No Post Made</h3>
+                    <h3 id="postmade">No Post Made</h3>
                 )}
             </div>
         </div>
