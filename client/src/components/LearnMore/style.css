@@ -1,3 +1,4 @@
+
 #container {
     background-color: rgba(51, 135, 214, 0.932);
     border-radius: 25px;
@@ -6,8 +7,8 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -40%);
-  }
-
+  
+}
   #learnMoreInfo {
     font-size: 30px;
     padding:90px;
