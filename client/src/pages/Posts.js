@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Post from "../components/Post";
 import Form from "../components/Form";
-import { use } from "passport";
 import API from "../utils/API";
 import "./Posts.css";
 
@@ -21,7 +20,6 @@ function Posts() {
             .then(res => {
                 setPosts(res.data)
             })
-            .catch(err => console.log(err))
     }
 
     function handleInputChange(event) {
@@ -34,7 +32,7 @@ function Posts() {
         API.savePost({
             title: formObject.title,
             description: formObject.description,
-            user_id: userId.id
+            UserId: userId
         })
             .then(res => loadPost())
             .then(res => setFormObject(""))
@@ -43,10 +41,8 @@ function Posts() {
 
     function loadUserId() {
         API.checkUserInfo()
-            .then(res => setUserId({
-                id: res.data.id
-            }))
-            .then(res => console.log(userId.id))
+            .then(res => setUserId(res.data.id))
+            .catch(err => console.log(err))
     }
     return (
         <div className="container" style={{ background: "white", borderRadius: "10px" }}>
