@@ -49,8 +49,10 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
+
         <div className="container" >
             <div className="form">
+
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
             <div className="post">
