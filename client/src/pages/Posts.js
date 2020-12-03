@@ -49,13 +49,8 @@ function Posts() {
             .then(res => console.log(userId.id))
     }
     return (
-<<<<<<< HEAD
         <div className="container" style={{ background: "white", borderRadius: "10px" }}>
             <div className="row" style={{ margin: "20px" }}>
-=======
-        <div className="container" >
-            <div className="form">
->>>>>>> 629028d924c5f0c3e8a5a7942a043739d862a17d
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
             <div className="post">
