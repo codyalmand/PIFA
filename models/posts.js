@@ -10,8 +10,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        // Users identification
-        user_id: {
+        //Users identification
+        UserId: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
