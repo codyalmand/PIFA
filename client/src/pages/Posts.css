@@ -1,4 +1,4 @@
-
+@media(max-width: 765px) {
 .container {
     background-color: rgba(51, 135, 214, 0.932);
     border-radius: 25px;
@@ -10,7 +10,7 @@
     transform: translate(-50%, -40%);
     padding:300px;
   }
-  @media(max-width: 765px) {
+
 #postmade {
     background-color: rgba(51, 135, 214, 0.932);
 }
