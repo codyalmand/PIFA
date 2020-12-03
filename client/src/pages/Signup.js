@@ -36,7 +36,7 @@ function Signup() {
     }
 
     return <div>
-        <div id="signupContainer" className="container">
+        <div id="signupContainer">
             <div className="row">
                 <div id="signupForm" className="col-md-6 col-md-offset-3">
                     <h2 id="signupP">Sign Up</h2>
@@ -65,6 +65,7 @@ function Signup() {
                 </div>
             </div>
         </div>
+        
     </div>
 }
 

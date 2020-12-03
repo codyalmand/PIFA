@@ -45,8 +45,8 @@ function Posts() {
             .catch(err => console.log(err))
     }
     return (
-        <div className="container" style={{ background: "white", borderRadius: "10px" }}>
-            <div className="row" style={{ margin: "20px" }}>
+        <div id="postsContainer">
+            <div className="row" >
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
             <div className="post">

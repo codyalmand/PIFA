@@ -12,6 +12,7 @@ import LandingPage from "./pages/LandingPage.js";
 import LearnMore from "./components/LearnMore/index.js";
 
 
+
 function App() {
     // Our provider is setup in index.js so we can use the GlobalStore here easily.
 
@@ -46,6 +47,7 @@ function App() {
     }
 
     return (
+        
         <Router>
 
                 <Navbar />
@@ -81,11 +83,12 @@ function App() {
                     
                     <Route>
             { /*If none of the other pages match, redirect them to the main page */}
-                        <Redirect to="/" />
+                        <Redirect to="/LandingPage" />
                     </Route>
                 </Switch>
 
         </Router>
+      
     );
 }
 
