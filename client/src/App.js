@@ -11,7 +11,7 @@ import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 import LandingPage from "./pages/LandingPage.js";
 import LearnMore from "./components/LearnMore/index.js";
-
+import Profile from "./pages/Profile";
 
 
 function App() {
@@ -74,6 +74,7 @@ function App() {
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
                                 <Route exact path="/logout" component={logout} />
+                                <Route exact path="/Profile" component={Profile} />
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/" />

@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
+import API from "../utils/API";
+import Post from "../components/Post"
 
 function Profile() {
     
     const [userPosts, setUserPosts] = useState([]);
-    const [userId, setUserId] = useState("");
+    const [userId, setUserId] = useState();
     
     useEffect(() => {
-        loadUserPosts()
         loadUserId()
+        loadUserPosts()
     }, []);
-
-    function loadUserPosts() {
-        console.log("load user posts hit")
-        API.getUserPosts(userId)
-            .then(res => {
-                setUserPosts(res.data)
-            })
-    }
 
     function loadUserId() {
         console.log("load user id hit")
         API.checkUserInfo()
-            .then(res => setUserId(res.data.id))
+            .then(res => {
+                console.log(res)
+                setUserId(res.data.id)})
             .catch(err => console.log(err))
+    }
+
+    function loadUserPosts() {
+        console.log(userId);
+        console.log("load user posts hit")
+        API.getUserPosts(userId)
+            .then(res => {
+                console.log(res);
+                setUserPosts(res.data)
+            })
     }
 
     return ( 
