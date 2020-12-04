@@ -12,6 +12,7 @@
     background-color: rgb(51, 135, 214);
     border: none;
     border-radius: 12px;
+    font-family: serif
 }
 
 #button:hover {
