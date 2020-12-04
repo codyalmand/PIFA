@@ -1,8 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import Navbar from "../components/Navbar.js";
 import "./style.css"
-import Button from 'react-bootstrap/Button';
 
 function LearnMore() {
     return ( 

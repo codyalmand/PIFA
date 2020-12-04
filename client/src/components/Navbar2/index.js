@@ -1,34 +1,37 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import "./style.css"
+import "../Navbar/style.css";
 import Button from 'react-bootstrap/Button';
 
 
-function Navbar() {
+function Navbar2() {
     return (
         <div>
             <div id="row" className="row">
-            <Link to='/Signup' className="nav-link">
+                <Link to='/Posts' className="nav-link">
                     <Button id="button">
-                    Sign Up
+                    Posts
                     </Button>
                 </Link>
-                <Link to='/Login' className="nav-link">
+                <Link to='/Profile' className="nav-link">
                     <Button id="button">
-                    Login
+                    Profile
                     </Button>
                 </Link>
-       
                 <Link to='/LearnMore' className="nav-link">
                     <Button id="button">
                     LearnMore
                     </Button>
                 </Link>
+                <Link to='/Logout' className="nav-link">
+                    <Button id="button">
+                    Logout
+                    </Button>
+                </Link>
             </div>
-            
+
         </div>
     );
 }
 
-export default Navbar;
+export default Navbar2; 
