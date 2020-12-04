@@ -1,17 +1,21 @@
-@media(max-width: 765px) {
-#signupContainer {
-    background-color: rgba(51, 135, 214, 0.945);
-    text-align: center;
-    border-radius: 25px;
-    position: absolute;
 
+#signupContainer {
+    background-color: rgba(51, 135, 214, 0.932);
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -40%);
+    padding:300px;
+    display: flex;
+    flex-direction: column;
+    
 }
-}
-#signupForm, #loginForm {
+
+#signupForm {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,3 +40,4 @@
 #formbutton:hover {
     background: rgb(21, 101, 175);
 }
+

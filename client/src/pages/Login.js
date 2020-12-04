@@ -35,7 +35,7 @@ function Login() {
     }
 
     return <div>
-        <div className="container" id="loginContainer">
+        <div id="loginContainer">
             <div className="row">
                 <div id="loginForm" className="col-md-6 col-md-offset-3">
                     <h2 id="signupP">Login</h2>
