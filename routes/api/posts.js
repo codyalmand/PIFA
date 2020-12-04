@@ -23,7 +23,7 @@ router.get("/posts", function (req, res) {
   });
 });
 
-router.get("/posts/user/:user_id", function (req, res) {
+router.get("/posts/:user_id", function (req, res) {
   db.Post.findAll({
     where: {
       UserId: req.params.user_id
