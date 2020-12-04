@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Posts from "./pages/Posts";
 import Navbar from "./components/Navbar";
+import Navbar2 from "./components/Navbar2";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
@@ -50,14 +51,16 @@ function App() {
         
         <Router>
 
-                <Navbar />
-                <LandingPage />
+                
+                {/* <LandingPage /> */}
                 
                 <Switch>
                     {
                         !state.userLoggedIn ? (
             // These routes are only avaialable to LOGGED OUT users
                             <>
+                            <Navbar />
+                            <LandingPage />
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
@@ -66,9 +69,11 @@ function App() {
                         ) : (
             // These routes are only available to LOGGED IN users
                             <>
-                                
+                            <Navbar2 />
+                                <LandingPage />
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
+                                <Route exact path="/logout" component={logout} />
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/" />

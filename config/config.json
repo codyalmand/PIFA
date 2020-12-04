@@ -1,22 +1,15 @@
 {
-    "development": {
-      "use_env_variable": "LOCALDB_URL",
-      "username": "rofyla868p8gn840h8ot",
-      "password": "rphnppj3bg7nii7u4oot",
-      "database": "cppg6kooprzzlcq5",
-      "host": "r1bsyfx4gbowdsis.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "dialect": "mysql"
-    },
-    "test": {
-      "use_env_variable": "LOCALDB_URL",
-      "username": "rofyla868p8gn840h8ot",
-      "password": "rphnppj3bg7nii7u4oot",
-      "database": "cppg6kooprzzlcq5",
-      "host": "r1bsyfx4gbowdsis.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      "dialect": "mysql"
-    },
-    "production": {
-      "use_env_variable": "JAWSDB_URL",
-      "dialect": "mysql"
-    }
+  "development": {
+    "use_env_variable": "LOCALDB_URL"
+  },
+  "test": {
+    "username": "root",
+    "password": "Tigerseye05!6",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL"
+  }
 }
