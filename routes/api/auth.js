@@ -3,6 +3,7 @@ const router = require("express").Router();
 const db = require("../../models");
 const passport = require("../../config/passport");
 const nodemailer = require('nodemailer');
+//const LandingPage = require('../../client/src/pages/LandingPage');
 
 let transporter = nodemailer.createTransport({
   service: 'gmail',

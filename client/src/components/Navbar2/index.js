@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Navbar/style.css";
@@ -8,6 +9,7 @@ function Navbar2() {
     return (
         <div>
             <div id="row" className="row">
+
                 <Link to='/Posts' className="nav-link">
                     <Button id="button">
                     Posts
@@ -18,6 +20,7 @@ function Navbar2() {
                     Profile
                     </Button>
                 </Link>
+
                 <Link to='/LearnMore' className="nav-link">
                     <Button id="button">
                     LearnMore
@@ -34,4 +37,6 @@ function Navbar2() {
     );
 }
 
+
 export default Navbar2; 
+

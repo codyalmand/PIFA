@@ -59,8 +59,10 @@ function App() {
                          !state.userLoggedIn ? (
             // These routes are only avaialable to LOGGED OUT users
                             <>
-                               <Navbar />
-                                <LandingPage />
+
+                            <Navbar />
+                            <LandingPage />
+
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
@@ -69,11 +71,13 @@ function App() {
                         ) : (
             // These routes are only available to LOGGED IN users
                             <>
-                                <Navbar2 />
+
+                            <Navbar2 />
                                 <LandingPage />
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
-                                <Route exact path="/Logout" component={Logout} />
+                                <Route exact path="/logout" component={logout} />
+
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/" />
