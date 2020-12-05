@@ -15,8 +15,6 @@ import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
 
 
 
-
-
 function App() {
     // Our provider is setup in index.js so we can use the GlobalStore here easily.
 
@@ -77,6 +75,7 @@ function App() {
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
                                 <Route exact path="/logout" component={logout} />
+                                <Route exact path="/Profile" component={Profile} />
 
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}

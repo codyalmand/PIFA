@@ -19,5 +19,14 @@ export default {
     },
     savePost: (postData) => {
         return axios.post("/api/posts", postData);
+    },
+    getUserPosts: (userId) => {
+        return  axios.get("/api/posts/:user_id", userId);
+    },
+    deleteUserPost: (postId) => {
+        return axios.delete("/api/posts/:id", postId);
+    },
+    updatePost: () => {
+        return axios.update("/api/posts");
     }
 }
