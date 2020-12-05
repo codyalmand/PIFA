@@ -5,6 +5,9 @@ export default {
     checkUserInfo: () => {
         return axios.get("/api/user_data");
     },
+    unCheckUserInfo: () => {
+        return null;
+    },
     signup: (signupData) => {
         return axios.post("/api/signup", signupData)
     },
@@ -28,5 +31,8 @@ export default {
     },
     updatePost: () => {
         return axios.update("/api/posts");
+    },
+    sendEmail: (event) => {
+        return axios.post("api/email", event);
     }
 }
