@@ -24,7 +24,7 @@ export default {
         return  axios.get("/api/posts/:user_id", userId);
     },
     deleteUserPost: (postId) => {
-        return axios.delete("/api/posts/:id", postId);
+        return axios.delete("/api/posts/" + postId);
     },
     updatePost: () => {
         return axios.update("/api/posts");
