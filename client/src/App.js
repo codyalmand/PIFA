@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
 import './App.css';
+import LandingPage from "./pages/LandingPage.js";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Logout from "./components/Logout";
 import Posts from "./pages/Posts";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
+import LearnMore from "./components/LearnMore/index.js";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
-import LandingPage from "./pages/LandingPage.js";
-import LearnMore from "./components/LearnMore/index.js";
-import Profile from "./pages/Profile";
+
 
 
 function App() {
@@ -50,31 +51,32 @@ function App() {
     return (
         
         <Router>
-
-                
-                {/* <LandingPage /> */}
                 
                 <Switch>
                     {
-                        !state.userLoggedIn ? (
+                         !state.userLoggedIn ? (
             // These routes are only avaialable to LOGGED OUT users
                             <>
+
                             <Navbar />
                             <LandingPage />
+
                                 <Route exact path="/Login" component={Login} />
                                 <Route exact path="/Signup" component={Signup} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
-                                <Route exact path="/Posts" component={Posts} />
+
                             </>
                         ) : (
             // These routes are only available to LOGGED IN users
                             <>
+
                             <Navbar2 />
                                 <LandingPage />
                                 <Route exact path="/Posts" component={Posts} />
                                 <Route exact path="/LearnMore" component={LearnMore} />
                                 <Route exact path="/logout" component={logout} />
                                 <Route exact path="/Profile" component={Profile} />
+
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}
                                     <Redirect to="/" />

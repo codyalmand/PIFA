@@ -46,10 +46,10 @@ function Posts() {
     }
     return (
         <div id="postsContainer">
-            <div className="row" >
+            <div id="inputBox">
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
-            <div className="post">
+            <div id="post">
                 {posts.length ? (
                     posts.map(post => (
                         <Post

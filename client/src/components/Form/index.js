@@ -3,8 +3,9 @@ import "../../pages/Posts.css";
 
 function Form (props) {
     return (
-        <div id="formInfo">
-               <div className="form-group">
+        <div>
+               <div id="formInfo" className="form-group">
+                   <h1>Post Your Requests</h1>
                     <input 
                         className="form-control"
                         name="title"
