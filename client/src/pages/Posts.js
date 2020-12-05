@@ -8,7 +8,7 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
-    const [userId, setUserId] = useState("");
+    const [userInfo, setUserInfo] = useState("");
 
     useEffect(() => {
         loadPost()
@@ -32,7 +32,7 @@ function Posts() {
         API.savePost({
             title: formObject.title,
             description: formObject.description,
-            UserId: userId
+            UserId: userInfo.id
         })
             .then(res => loadPost())
             .then(res => setFormObject(""))
@@ -41,7 +41,7 @@ function Posts() {
 
     function loadUserId() {
         API.checkUserInfo()
-            .then(res => setUserId(res.data.id))
+            .then(res => setUserInfo(res.data))
             .catch(err => console.log(err))
     }
     return (
@@ -55,6 +55,7 @@ function Posts() {
                         <Post
                             title={post.title}
                             description={post.description}
+                            username={userInfo.username}
                         />
                     ))
                 ) : (

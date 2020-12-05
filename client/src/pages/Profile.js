@@ -7,7 +7,7 @@ import Post from "../components/Post"
 function Profile() {
     
     const [userPosts, setUserPosts] = useState([]);
-    const [userId, setUserId] = useState();
+    const [userInfo, setUserInfo] = useState("");
     
     useEffect(() => {
         loadUserId()
@@ -18,15 +18,15 @@ function Profile() {
         //console.log("load user id hit")
         API.checkUserInfo()
             .then(res => {
-                //console.log(res)
-                setUserId(res.data.id)})
+                console.log(res)
+                setUserInfo(res.data)})
             .catch(err => console.log(err))
     }
 
     function loadUserPosts() {
         //console.log(userId);
         //console.log("load user posts hit")
-        API.getUserPosts(userId)
+        API.getUserPosts(userInfo.id)
             .then(res => {
                 //console.log(res);
                 setUserPosts(res.data)
@@ -51,7 +51,7 @@ function Profile() {
                         <Post
                             title={post.title}
                             description={post.description}
-                            key={post.id}
+                            username={userInfo.username}
                         >
                         </Post>
                         <button id="deletebutton" type="button" onClick={() => {handleDelete(post.id)}}>
