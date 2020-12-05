@@ -23,10 +23,11 @@ router.get("/posts", function (req, res) {
   });
 });
 
-router.get("/posts/user/:user_id", function (req, res) {
+router.get("/posts/:user_id", function (req, res) {
+  console.log(req)
   db.Post.findAll({
     where: {
-      UserId: req.params.user_id
+      UserId: req.user.id
     }
   }).then(function (dbEvent) {
     res.json(dbEvent);
