@@ -24,7 +24,7 @@ router.get("/posts", function (req, res) {
 });
 
 router.get("/posts/:user_id", function (req, res) {
-  console.log(req)
+  //console.log(req)
   db.Post.findAll({
     where: {
       UserId: req.user.id
@@ -35,6 +35,7 @@ router.get("/posts/:user_id", function (req, res) {
 });
 
 router.delete("/posts/:id", function (req, res) {
+  console.log(req.params)
   db.Post.destroy({
     where: {
       id: req.params.id
