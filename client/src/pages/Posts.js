@@ -8,8 +8,10 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
+
     const [userId, setUserId] = useState("");
     const [email, setEmail] = useState("");
+
 
     useEffect(() => {
         loadPost()
@@ -37,8 +39,10 @@ function Posts() {
         API.savePost({
             title: formObject.title,
             description: formObject.description,
+
             UserId: userId,
             email: email
+
         })
             .then(res => loadPost())
             .then(res => setFormObject(""))
@@ -47,7 +51,7 @@ function Posts() {
 
     function loadUserId() {
         API.checkUserInfo()
-            .then(res => setUserId(res.data.id))
+            .then(res => setUserInfo(res.data))
             .catch(err => console.log(err))
     }
 
@@ -79,8 +83,10 @@ function Posts() {
                             email={post.email}
                             handleEmail={handleEmail}
                             title={post.title}
+
                             description={post.description} 
                             key={post.id}
+
                         />
                     ))
                 ) : (

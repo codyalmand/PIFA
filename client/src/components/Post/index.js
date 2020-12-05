@@ -5,8 +5,10 @@ import "./style.css"
 
 function Post(props) {
     return (
+
         <div key={props.id} className="col-12 border">
-            <h3 id="username" >UserName</h3>
+            <h3 id="username" >{props.username}</h3>
+
             <br></br><hr></hr>
             <p id="title">{props.title}</p>
             <hr></hr>
