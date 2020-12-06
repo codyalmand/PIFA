@@ -53,7 +53,7 @@ function Posts() {
 
     function loadUserId() {
         API.checkUserInfo()
-            .then(res => setUserInfo(res.data))
+            .then(res => setUserId(res.data.id))
             .catch(err => console.log(err))
     }
 
