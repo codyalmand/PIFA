@@ -8,11 +8,19 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
-    const [userInfo, setUserInfo] = useState("");
+
+    const [userId, setUserId] = useState("");
+    const [email, setEmail] = useState("");
+
+
 
     useEffect(() => {
         loadPost()
         loadUserId()
+        loadUserEmail()
+        return function cleanup() {
+            API.unCheckUserInfo()
+        }
     }, []);
 
     function loadPost() {
@@ -32,7 +40,11 @@ function Posts() {
         API.savePost({
             title: formObject.title,
             description: formObject.description,
-            UserId: userInfo.id
+
+            UserId: userId,
+            email: email
+
+
         })
             .then(res => loadPost())
             .then(res => setFormObject(""))
@@ -44,19 +56,39 @@ function Posts() {
             .then(res => setUserInfo(res.data))
             .catch(err => console.log(err))
     }
+
+    function loadUserEmail() {
+        API.checkUserInfo()
+        .then(res => setEmail(res.data.email))
+        .catch(err => console.log(err))
+    }
+
+    function handleEmail(e) {
+        //console.log(e.target.id);
+        API.sendEmail({email: e.target.id});
+    }
+
     return (
         <div id="postsContainer">
             <div id="inputBox">
-                <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
+                <Form 
+                onChange={handleInputChange} 
+                onClick={handleFormSubmit} 
+                />
             </div>
             <p id="helpOthers">Consider Helping Others In Need</p>
             <div>
                 {posts.length ? (
+                    
                     posts.map(post => (
-                        <Post 
+                        
+                        <Post
+                            email={post.email}
+                            handleEmail={handleEmail}
                             title={post.title}
-                            description={post.description}
-                            username={userInfo.username}
+
+                            description={post.description} 
+                            key={post.id}
                         />
                     ))
                 ) : (
