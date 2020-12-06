@@ -4,7 +4,7 @@ import './App.css';
 import LandingPage from "./pages/LandingPage.js";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Logout from "./components/Logout";
+import Profile from "./pages/Profile";
 import Posts from "./pages/Posts";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
@@ -41,11 +41,12 @@ function App() {
     }, []);
 
     const logout = () => {
-        API.logout().then(() => {
+       
             dispatch({
                 type: AUTH_SET_LOGGED_OUT
-            })
+            
         })
+        return null;
     }
 
     return (

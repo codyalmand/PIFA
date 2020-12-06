@@ -8,7 +8,7 @@ function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
-    const [userId, setUserId] = useState("");
+    const [userInfo, setUserInfo] = useState("");
 
     useEffect(() => {
         loadPost()
@@ -18,7 +18,7 @@ function Posts() {
     function loadPost() {
         API.getPosts()
             .then(res => {
-                setPosts(res.data)
+            setPosts(res.data)
             })
     }
 
@@ -32,7 +32,7 @@ function Posts() {
         API.savePost({
             title: formObject.title,
             description: formObject.description,
-            UserId: userId
+            UserId: userInfo.id
         })
             .then(res => loadPost())
             .then(res => setFormObject(""))
@@ -41,7 +41,7 @@ function Posts() {
 
     function loadUserId() {
         API.checkUserInfo()
-            .then(res => setUserId(res.data.id))
+            .then(res => setUserInfo(res.data))
             .catch(err => console.log(err))
     }
     return (
@@ -49,17 +49,20 @@ function Posts() {
             <div id="inputBox">
                 <Form onChange={handleInputChange} onClick={handleFormSubmit}/>
             </div>
-            <div id="post">
+            <p id="helpOthers">Consider Helping Others In Need</p>
+            <div>
                 {posts.length ? (
                     posts.map(post => (
-                        <Post
+                        <Post 
                             title={post.title}
                             description={post.description}
+                            username={userInfo.username}
                         />
                     ))
                 ) : (
                     <h3 id="postmade">No Post Made</h3>
                 )}
+                <hr></hr><br></br>
             </div>
         </div>
     )

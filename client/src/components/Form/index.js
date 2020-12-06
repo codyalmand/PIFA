@@ -1,10 +1,10 @@
 import React from "react";
-import "../../pages/Posts.css";
+import "../../pages/Signup.css";
 
 function Form (props) {
     return (
         <div>
-               <div id="formInfo" className="form-group">
+               <div id="formInfo">
                    <h1>Post Your Requests</h1>
                     <input 
                         className="form-control"
@@ -13,7 +13,7 @@ function Form (props) {
                         onChange={props.onChange}
                     />
                 
-                    <textarea
+                    <textarea 
                         className="form-control"
                         rows="5"
                         name="description"
@@ -21,9 +21,10 @@ function Form (props) {
                         onChange={props.onChange}
                     />
                 </div>
-                <button id="formbutton" type="button" onClick={props.onClick}>
+                <button id="postButton" type="button" onClick={props.onClick}>
                     Post Request
                 </button>
+                <hr></hr>
         </div>
     );
 }
