@@ -1,0 +1,50 @@
+
+#profileContainer {
+    background-color: rgba(51, 135, 214, 0.932);
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
+    font-family: serif;
+    letter-spacing: 1px;
+
+    border-radius: 25px;
+    min-width: 300px;
+}
+
+#profiletitle {
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin-top:50px;
+}
+
+#YPP {
+    font-size: 25px;
+    color: white;
+    margin-top:30px;
+}
+
+#postsInProfile {
+    
+}
+
+#deleteButton {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 135, 214);
+    border:solid white 1px;
+    border-radius: 12px;
+    width: 400px;
+    margin-bottom:25px;
+    letter-spacing: 2px;
+}
+
+#deleteButton:hover {
+    background: rgb(21, 101, 175);
+}
