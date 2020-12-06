@@ -1,8 +1,11 @@
 
 #postsBorder {
-    border: solid white 1px;
+    border: solid white 2px;
     border-radius: 20px;
-    margin: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom:30px;
+    width: 800px;
 }
 
 #title {
@@ -15,6 +18,7 @@
 
 #username {
     font-size: 20px;
+    padding-left:20px;
     padding-top: 20px;
     color: black;
     float: left;
@@ -25,4 +29,19 @@
     color: white;
     padding-bottom: 30px;
     font-size: 20px;
+}
+
+.helpButton {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background: rgb(21, 101, 175);
+    border:solid white 1px;
+    border-radius: 12px;
+    width: 300px;
+    margin-bottom:25px;
+    letter-spacing: 2px;
+}
+#helpButton:hover {
+    background: rgb(21, 101, 175);
 }

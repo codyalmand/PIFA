@@ -5,7 +5,8 @@ function Form (props) {
     return (
         <div>
                <div id="formInfo">
-                   <h1>Post Your Requests</h1>
+                   <h1 id="postYourRequest">Post Your Requests</h1>
+                   <hr></hr>
                     <input 
                         className="form-control"
                         name="title"
@@ -24,7 +25,7 @@ function Form (props) {
                 <button id="postButton" type="button" onClick={props.onClick}>
                     Post Request
                 </button>
-                <hr></hr>
+                <hr></hr><br></br>
         </div>
     );
 }

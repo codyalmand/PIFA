@@ -1,28 +1,26 @@
 
 #postsContainer {
-    background-color: rgba(51, 135, 214, 0.932);
+    background-color: rgba(51, 135, 214, 0.966);
     text-align: center;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -10%);
     font-family: serif;
     border-radius: 25px;
     letter-spacing: 1px;
     min-width: 300px;
+    padding:50px;
+    display: flex;
+    flex-direction: column;
 }
 
 #inputBox {
-    padding:50px;
+    margin-left:100px;
+    margin-right:100px;
     min-width: 350px;
-}
-
-#post {
-    background-color: rgba(51, 135, 214, 0.596);
-    color: rgb(129, 18, 18);
-    
 }
 
 h1 {

@@ -1,18 +1,19 @@
 
 #profileContainer {
-    background-color: rgba(51, 135, 214, 0.932);
+    background-color: rgba(51, 135, 214, 0.966);
     text-align: center;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -20%);
+    -ms-transform: translate(-40%, -50%);
+    transform: translate(-50%, -10%);
     font-family: serif;
     letter-spacing: 1px;
-
     border-radius: 25px;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 #profiletitle {
@@ -21,6 +22,7 @@
     font-size: 40px;
     color: rgb(255, 255, 255);
     margin-top:50px;
+    margin-bottom:30px;
 }
 
 #YPP {
@@ -30,7 +32,9 @@
 }
 
 #postsInProfile {
-    
+    padding-right:100px;
+    padding-left:100px;
+    width: 100%;
 }
 
 #deleteButton {
@@ -40,8 +44,8 @@
     background-color: rgb(51, 135, 214);
     border:solid white 1px;
     border-radius: 12px;
-    width: 400px;
-    margin-bottom:25px;
+    width: 300px;
+    margin-bottom:40px;
     letter-spacing: 2px;
 }
 
