@@ -34,5 +34,8 @@ export default {
     },
     sendEmail: (event) => {
         return axios.post("api/email", event);
+    },
+    getNews: function () {
+        return axios.get("https://gnews.io/api/v4/search?q=%22austin+texas%22&max=10&token=62991933ad5f16f4752aa9b989649c3d")
     }
 }

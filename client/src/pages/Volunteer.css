@@ -1,0 +1,17 @@
+.container {
+    background-color: rgba(51, 135, 214, 0.932);
+    text-align: center;
+    align-items: center;
+    font-family: serif;
+    padding:50px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+
+.link {
+    border: 1px solid rgb(0, 0, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 255, 0.432);
+    color: white;
+    padding: 5px
+}

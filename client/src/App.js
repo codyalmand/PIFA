@@ -6,12 +6,15 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Posts from "./pages/Posts";
+import Volunteer from "./pages/Volunteer";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
 import LearnMore from "./components/LearnMore/index.js";
 import { useStoreContext } from './utils/GlobalStore';
 import API from './utils/API';
 import { AUTH_SET_LOGGED_IN, AUTH_SET_LOGGED_OUT } from "./utils/actions";
+import News from './pages/News';
+
 
 
 
@@ -77,6 +80,8 @@ function App() {
                                 <Route exact path="/LearnMore" component={LearnMore} />
                                 <Route exact path="/logout" component={logout} />
                                 <Route exact path="/Profile" component={Profile} />
+                                <Route exact path="/Volunteer" component={Volunteer} />
+                                <Route exact path="/News" component={News} />
 
 
             {/* If you are logged in, going to the login/signup page will take you to the members page */}
