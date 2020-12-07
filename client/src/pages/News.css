@@ -6,7 +6,35 @@
     letter-spacing: 1px;
 }
 
-#heading {
+#newsArticles {
+    margin-bottom:25px;
+}
+
+#newsHeadline {
     text-align: center;
     align-items: center;
+    font-size: 25px;
+    margin:30px;
+}
+
+#newsArticles {
+    border: solid white 2px;
+    padding:20px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-family: serif;
+}
+
+#newsButton {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(51, 135, 214, 0.74);
+    border:solid white 1px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    width: 300px;
+}
+#newsButton:hover {
+    background: rgb(21, 101, 175);
 }
