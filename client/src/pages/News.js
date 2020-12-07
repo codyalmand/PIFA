@@ -17,13 +17,15 @@ function News() {
         <div className="container">
             <div className="row">
                 <div className="col-12" id="heading">
-                    <h1>
-                        Helping people isn't the only way to be involved with your community. Stay up to date and informed with local news here.
+                    <h1 id="newsHeadline">
+                        <p>Helping people isn't the only way to be involved with your community.</p>
+                         <p>Stay up to date and informed with local news here.</p>
                     </h1>
+                    <hr></hr>
                 </div>
             </div>
             {news.map(article => (
-                <NewsItem 
+                <NewsItem id="newsItem"
                     image={article.image}
                     title={article.title}
                     description={article.description}

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../pages/News.css"
 
 function NewsItem(props) {
     return (
-        <div className="row" style={{ marginTop: "20px", background: "white", borderRadius: "25px", padding: "20px" }}>
+        <div id="newsArticles" className="row">
             <div className="col-sm-12 col-md-4">
                 <img src={props.image} alt="Article" style={{ height: "250px", width: "100%" }} />
             </div>
@@ -12,7 +13,7 @@ function NewsItem(props) {
                 <p>
                     {props.description}
                 </p>
-                <Link to={{ pathname: props.url }} target="_blank" className="link" >
+                <Link id="newsButton" to={{ pathname: props.url }} target="_blank" className="link" >
                     Read Here
                 </Link>
             </div>

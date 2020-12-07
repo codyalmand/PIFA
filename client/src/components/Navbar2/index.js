@@ -12,7 +12,7 @@ function Navbar2() {
 
                 <Link to='/Posts' className="nav-link">
                     <Button id="button">
-                    Posts
+                    Community Posts
                     </Button>
                 </Link>
                 <Link to='/Profile' className="nav-link">
@@ -21,11 +21,6 @@ function Navbar2() {
                     </Button>
                 </Link>
 
-                <Link to='/LearnMore' className="nav-link">
-                    <Button id="button">
-                    LearnMore
-                    </Button>
-                </Link>
                 <Link to='/Volunteer' className="nav-link">
                     <Button id="button">
                     Volunteer
@@ -34,6 +29,11 @@ function Navbar2() {
                 <Link to='/News' className="nav-link">
                     <Button id="button">
                     News
+                    </Button>
+                </Link>
+                <Link to='/LearnMore' className="nav-link">
+                    <Button id="button">
+                    LearnMore
                     </Button>
                 </Link>
                 <Link to='/Logout' className="nav-link">
