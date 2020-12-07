@@ -52,7 +52,7 @@ function Login() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button id="formbutton" type="submit" className="btn btn-default">Login</button>
+                        <button id="loginButton" type="submit" className="btn btn-default">Login</button>
                         <br></br><br></br>
                     </form>
                  

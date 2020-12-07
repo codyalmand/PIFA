@@ -44,18 +44,21 @@ function Profile() {
 
     return ( 
         <div>
-            <div className="post">
+            <div id="profileContainer">
+            <h1 id="profiletitle">Your Profile</h1>
+            <hr></hr>
+            <p id="YPP">Your Past Posts</p>
                 {userPosts.length ? (
                     userPosts.map(post => (
-                        <div key={post.id}>
+                        <div id="postsInProfile" key={post.id}>
                         <Post
                             title={post.title}
                             description={post.description}
                             username={userInfo.username}
                         >
                         </Post>
-                        <button id="deletebutton" type="button" onClick={() => {handleDelete(post.id)}}>
-                                Delete
+                        <button id="deleteButton" type="button" onClick={() => {handleDelete(post.id)}}>
+                                Delete Post
                         </button>
                         </div>
                     ))
