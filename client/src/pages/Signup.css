@@ -20,7 +20,7 @@
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -47%);
+    transform: translate(-50%, -40%);
     font-size: 20px;
 }
 
@@ -28,16 +28,39 @@
     color: white;
   }
 
-#formbutton {
+#signupButton {
     padding:10px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     background-color:rgba(51, 135, 214, 0.74);
     border:solid white 1px;
     border-radius: 12px;
+    letter-spacing: 2px;
 }
 
-#formbutton:hover {
+#postButton {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(51, 135, 214, 0.74);
+    border:solid white 1px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    width: 300px;
+}
+
+#postButton:hover {
     background: rgb(21, 101, 175);
 }
 
+#postYourRequest {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+#formInfo {
+    margin-bottom:20px;
+    padding:30px;
+    width:800px;
+}

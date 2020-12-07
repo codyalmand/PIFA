@@ -1,10 +1,10 @@
 import React from "react";
-import "./style.css"
+import "./LearnMore.css"
 
 function LearnMore() {
     return ( 
         <div>
-            <container id="container">
+            <container id="LMcontainer">
                 <h1 id="learnMoreInfo">
                 <p> We believe our application would provide an easy and accessible way of helping others in the community,
                      while also providing an outlet for those who need the help to find it.</p>

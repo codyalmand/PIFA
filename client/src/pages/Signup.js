@@ -57,7 +57,7 @@ function Signup() {
                             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span className="sr-only">Error:</span> <span className="msg">{errorMessage}</span>
                         </div>
-                        <button id="formbutton" type="submit" className="btn btn-default">Sign Up</button>
+                        <button id="signupButton" type="submit" className="btn btn-default">Sign Up</button>
                         <br></br><br></br>
                     </form>
                  

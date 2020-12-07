@@ -13,6 +13,7 @@ function Posts() {
     const [email, setEmail] = useState("");
 
 
+
     useEffect(() => {
         loadPost()
         loadUserId()
@@ -25,7 +26,7 @@ function Posts() {
     function loadPost() {
         API.getPosts()
             .then(res => {
-                setPosts(res.data)
+            setPosts(res.data)
             })
     }
 
@@ -42,6 +43,7 @@ function Posts() {
 
             UserId: userId,
             email: email
+
 
         })
             .then(res => loadPost())
@@ -74,7 +76,8 @@ function Posts() {
                 onClick={handleFormSubmit} 
                 />
             </div>
-            <div id="post">
+            <p id="helpOthers">Consider Helping Others In Need</p>
+            <div>
                 {posts.length ? (
                     
                     posts.map(post => (
@@ -86,12 +89,12 @@ function Posts() {
 
                             description={post.description} 
                             key={post.id}
-
                         />
                     ))
                 ) : (
                     <h3 id="postmade">No Post Made</h3>
                 )}
+                <hr></hr><br></br>
             </div>
         </div>
     )
