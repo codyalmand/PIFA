@@ -1,0 +1,12 @@
+.container {
+    background-color: rgba(51, 135, 214, 0.932);
+    font-family: serif;
+    padding:50px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+
+#heading {
+    text-align: center;
+    align-items: center;
+}

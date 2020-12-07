@@ -26,6 +26,16 @@ function Navbar2() {
                     LearnMore
                     </Button>
                 </Link>
+                <Link to='/Volunteer' className="nav-link">
+                    <Button id="button">
+                    Volunteer
+                    </Button>
+                </Link>
+                <Link to='/News' className="nav-link">
+                    <Button id="button">
+                    News
+                    </Button>
+                </Link>
                 <Link to='/Logout' className="nav-link">
                     <Button id="button">
                     Logout
