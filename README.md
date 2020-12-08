@@ -25,6 +25,8 @@
 
   ## Description
   
+-Built with React-
+  <br>
 PIFA app allows users to ask the Austin community for help by posting help requests that include user information and a description of what they need. Other users of the PIFA app can then offer to help that person and are then connected via email exchange, and this 
 continues the cycle of paying it forward. View community posts, your profile with your pasts posts, there is also a volunteer link and local news pages. 
 
@@ -35,7 +37,6 @@ continues the cycle of paying it forward. View community posts, your profile wit
   3. npm run start:dev
 
   ## Usage
-  
   Create an account, view or request help from Austin's local community, Offer to help others that are posting requests in the local community,
   view your profile and your pasts posts, also view volunteer link page and a local news page. 
   
