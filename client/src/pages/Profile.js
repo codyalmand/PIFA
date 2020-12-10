@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 //import { Link } from "react-router-dom";
 import "./Profile.css";
 import API from "../utils/API";
-import Post from "../components/Post"
+import Post2 from "../components/Post2"
 let userId = "";
 
 
@@ -46,12 +46,12 @@ function Profile() {
                 {userPosts.length ? (
                     userPosts.map(post => (
                         <div id="postsInProfile" key={post.id}>
-                            <Post
+                            <Post2
                                 title={post.title}
                                 description={post.description}
                                 username={userInfo.username}
                             >
-                            </Post>
+                            </Post2>
                             <button id="deleteButton" type="button" onClick={() => {handleDelete(post.id)}}>
                             Delete Post
                         </button>
