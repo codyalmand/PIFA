@@ -35,21 +35,24 @@
     background-color:rgba(51, 135, 214, 0.74);
     border:solid white 1px;
     border-radius: 12px;
-    letter-spacing: 2px;
+}
+#signupButton:hover {
+    background: rgb(21, 101, 175);
 }
 
-#signupButton {
+#postButton {
     padding:10px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     background-color:rgba(51, 135, 214, 0.74);
     border:solid white 1px;
     border-radius: 12px;
-    letter-spacing: 2px;
     width: 300px;
+    margin-bottom:25px;
+    letter-spacing: 2px;
 }
 
-#signupButton:hover {
+#postButton:hover {
     background: rgb(21, 101, 175);
 }
 
