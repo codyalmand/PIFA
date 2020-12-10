@@ -35,13 +35,13 @@
     padding:10px;
     font-size: 18px;
     color: rgb(255, 255, 255);
-    background: rgb(21, 101, 175);
+    background-color:rgba(51, 135, 214, 0.74);
     border:solid white 1px;
     border-radius: 12px;
     width: 300px;
     margin-bottom:25px;
     letter-spacing: 2px;
 }
-#helpButton:hover {
+.helpButton:hover {
     background: rgb(21, 101, 175);
 }
