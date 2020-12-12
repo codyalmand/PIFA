@@ -12,7 +12,7 @@ function Post(props) {
             <p id="title">{props.title}</p>
             <hr></hr>
             <p id="description">{props.description}</p>    
-            <button onClick={props.handleEmail} type="button" className="helpButton" id={props.email}>Contact Them</button>     
+            <button onClick={props.handleEmail} type="button" className="helpButton" id={props.email}>Contact</button>     
         </div>
     )
 }
