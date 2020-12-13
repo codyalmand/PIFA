@@ -76,7 +76,6 @@ function Posts() {
                 <Form
                     onChange={handleInputChange}
                     onClick={handleFormSubmit}
-                    value={formObject}
                 />
                 {show ?
                     <Alert variant="success" onClose={() => setShow(false)} dismissible>
