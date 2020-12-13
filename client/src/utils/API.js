@@ -29,8 +29,8 @@ export default {
     deleteUserPost: (postId) => {
         return axios.delete("/api/posts/" + postId);
     },
-    updatePost: () => {
-        return axios.update("/api/posts");
+    updatePost: (data) => {
+        return axios.put("/api/posts", data);
     },
     sendEmail: (event) => {
         return axios.post("api/email", event);

@@ -37,7 +37,7 @@ function Posts() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        
+
         API.savePost({
             title: formObject.title,
             description: formObject.description,
@@ -66,6 +66,11 @@ function Posts() {
     }
 
     function handleEmail(e) {
+        let bla = e.target.value;
+         API.updatePost({id: bla, active: false})
+            .then(res => {
+                loadPost()
+            })
         API.sendEmail({ email: e.target.id });
     }
 
@@ -96,7 +101,9 @@ function Posts() {
                             title={post.title}
                             description={post.description}
                             key={post.id}
-                        />
+                            active={post.active}
+                            _id={post.id}
+                        /> 
                     ))
                 ) : (
                         <h3 id="postmade">No Post Made</h3>

@@ -1,3 +1,5 @@
+const { BOOLEAN } = require("sequelize");
+
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
         // Title of post request
@@ -18,6 +20,11 @@ module.exports = function(sequelize, DataTypes) {
         email: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        active: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: true
         }
     });
 

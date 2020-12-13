@@ -45,3 +45,15 @@
 #helpButton:hover {
     background: rgb(21, 101, 175);
 }
+
+.button2 {
+    padding:10px;
+    font-size: 18px;
+    color: rgb(25, 59, 18);
+    background: rgb(144, 211, 178);
+    border:solid white 1px;
+    border-radius: 12px;
+    width: 300px;
+    margin-bottom:25px;
+    letter-spacing: 2px;
+}

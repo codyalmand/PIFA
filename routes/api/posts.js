@@ -47,18 +47,10 @@ router.delete("/posts/:id", function (req, res) {
   });
 });
 
-// app.get("/events/:id", function(req, res) {
-//   db.Post.findOne({
-//     where: {
-//       genre: req.params.id
-//     }
-//   }).then(function(dbEvent) {
-//     res.json(dbEvent);
-//   });
-// });
 
 
 router.put("/posts", function (req, res) {
+  console.log(req.body.id)
   db.Post.update(
     req.body,
     {
@@ -70,20 +62,9 @@ router.put("/posts", function (req, res) {
     });
 });
 
-// router.delete("/posts/:id", function (req, res) {
-//   db.Post.destroy({
-//     where: {
-//       id: req.params.id
-//     }
-
-//   }).then(function (dbEvent) {
-//     res.json(dbEvent);
-//   })
-
-// })
 
 router.post("/email", function (req, res) {
-    console.log(req.body.email);
+    console.log(req.body);
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
