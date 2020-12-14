@@ -3,15 +3,15 @@ import Post from "../components/Post";
 import Form from "../components/Form";
 import API from "../utils/API";
 import "./Posts.css";
+import { Alert } from "react-bootstrap";
 
 function Posts() {
 
     const [posts, setPosts] = useState([]);
     const [formObject, setFormObject] = useState("");
-
     const [userId, setUserId] = useState("");
     const [email, setEmail] = useState("");
-
+    const [show, setShow] = useState(false);
 
 
     useEffect(() => {
@@ -26,27 +26,29 @@ function Posts() {
     function loadPost() {
         API.getPosts()
             .then(res => {
-            setPosts(res.data)
+                setPosts(res.data)
             })
     }
 
     function handleInputChange(event) {
-        const { name, value } = event.target;
-        setFormObject({ ...formObject, [name]: value})
+        let { name, value } = event.target;
+        setFormObject({ ...formObject, [name]: value })
     }
-    
+
     function handleFormSubmit(event) {
         event.preventDefault();
+
         API.savePost({
             title: formObject.title,
             description: formObject.description,
-
             UserId: userId,
             email: email
-
-
         })
-            .then(res => loadPost())
+            .then(res => {
+                loadPost()
+                setShow(true);
+            }
+            )
             .then(res => setFormObject(""))
             .catch(err => console.log(err))
     }
@@ -59,41 +61,53 @@ function Posts() {
 
     function loadUserEmail() {
         API.checkUserInfo()
-        .then(res => setEmail(res.data.email))
-        .catch(err => console.log(err))
+            .then(res => setEmail(res.data.email))
+            .catch(err => console.log(err))
     }
 
     function handleEmail(e) {
-        //console.log(e.target.id);
-        API.sendEmail({email: e.target.id});
+        let bla = e.target.value;
+         API.updatePost({id: bla, active: false})
+            .then(res => {
+                loadPost()
+            })
+        API.sendEmail({ email: e.target.id });
     }
+
 
     return (
         <div id="postsContainer">
             <div id="inputBox">
-                <Form 
-                onChange={handleInputChange} 
-                onClick={handleFormSubmit} 
+                <Form
+                    onChange={handleInputChange}
+                    onClick={handleFormSubmit}
                 />
+                {show ?
+                    <Alert variant="success" onClose={() => setShow(false)} dismissible>
+                        <Alert.Heading>Request published!</Alert.Heading>
+                    </Alert>
+                    :
+                    null
+                }
             </div>
+            <hr></hr>
             <p id="helpOthers">Consider Helping Others In Need</p>
             <div>
                 {posts.length ? (
-                    
                     posts.map(post => (
-                        
                         <Post
                             email={post.email}
                             handleEmail={handleEmail}
                             title={post.title}
-
-                            description={post.description} 
+                            description={post.description}
                             key={post.id}
-                        />
+                            active={post.active}
+                            _id={post.id}
+                        /> 
                     ))
                 ) : (
-                    <h3 id="postmade">No Post Made</h3>
-                )}
+                        <h3 id="postmade">No Post Made</h3>
+                    )}
                 <hr></hr><br></br>
             </div>
         </div>
