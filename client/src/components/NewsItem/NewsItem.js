@@ -14,7 +14,7 @@ function NewsItem(props) {
                     {props.description}
                 </p>
                 <Link id="newsButton" to={{ pathname: props.url }} target="_blank" className="link" >
-                    Read Here
+                    Read More
                 </Link>
             </div>
         </div>
