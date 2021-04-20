@@ -25,7 +25,7 @@
 
   ## Description
   
--Built with React-
+### Tools Utilized: React, Node, Express, Concurrently, database of MongoDB, and deployed with Heroku
   <br>
 PIFA app allows users to ask the Austin community for help by posting help requests that include user information and a description of what they need. Other users of the PIFA app can then offer to help that person and are then connected via email exchange, and this 
 continues the cycle of paying it forward. View community posts, your profile with your pasts posts, there is also a volunteer link and local news pages. 
